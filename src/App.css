@@ -1,5 +1,40 @@
+@font-face {
+  font-family: 'adelia';
+  src: url('fonts/adelia/adelia.otf')
+}
+
+#names {
+  font-size: 5rem;
+  color: goldenrod;
+  margin-top: 5rem;
+  border-top: 1px solid goldenrod;
+  border-bottom: 1px solid goldenrod;
+  min-width: 650px;
+  width: 28%;
+  transform: rotate(350deg);
+  font-family: adelia;
+}
+
+#main-container {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .App {
+
+  height: 100dvh;
+  width: 100dvw;
+  background: url('img1_crop.jpg');
+  background-size: cover;
   text-align: center;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 .App-logo {
@@ -32,6 +67,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

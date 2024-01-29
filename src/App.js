@@ -1,24 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div id="main-container" style={{ height: '100%', width: '100%', backgroundColor: 'rgba(160,120,40,0.2)' }}>
+
+        <div id="names">Mads - Nica</div>
+
+
+      </div>
+      <div style={{ backgroundColor: 'white', width: '100%', minHeight: 5000 }}>
+        FIRST CONTENT</div>
+    </div >
   );
 }
 
