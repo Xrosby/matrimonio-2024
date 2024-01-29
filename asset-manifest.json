@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/matrimonio-2024/static/css/main.c8d34b23.css",
+    "main.js": "/matrimonio-2024/static/js/main.d3f6e84c.js",
+    "static/media/img1_crop.jpg": "/matrimonio-2024/static/media/img1_crop.a598b153cc7084f2360b.jpg",
+    "static/media/adelia.otf": "/matrimonio-2024/static/media/adelia.3a027bde7446775041f5.otf",
+    "index.html": "/matrimonio-2024/index.html",
+    "main.c8d34b23.css.map": "/matrimonio-2024/static/css/main.c8d34b23.css.map",
+    "main.d3f6e84c.js.map": "/matrimonio-2024/static/js/main.d3f6e84c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c8d34b23.css",
+    "static/js/main.d3f6e84c.js"
+  ]
+}
