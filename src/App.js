@@ -27,7 +27,7 @@ function App() {
         <div id="getting-married">
           <h1>We're Getting Married!</h1>
           <div style={{ display: 'flex' }}>
-            <h2 style={{ borderRight: '1px solid darkgrey' }}>August 17th, 2024</h2><h2>Castello di San Basilio, Pisticci</h2>
+            <h2 style={{ borderRight: '1px solid darkgrey', paddingRight:10, marginRight:10 }}>August 17th, 2024</h2><h2>Castello di San Basilio, Pisticci</h2>
           </div>
         </div>
     },
