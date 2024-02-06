@@ -81,7 +81,7 @@ h2 {
 
 
 #background {
-  min-height:31.533dvh;
+  min-height: 31.533dvh;
   background: url('img2_crop.jpg') no-repeat;
   background-size: cover;
   min-width: 100dvw;
@@ -103,10 +103,6 @@ h2 {
   text-align: center;
 
 }
-
-body {}
-
-
 
 
 .App-logo {
@@ -145,6 +141,10 @@ body {}
   }
 }
 
+#location-photo {
+  max-width: 48%
+}
+
 
 /* Small devices such as large phones (330px and up) */
 @media only screen and (min-width: 130px) and (max-width:768px) {
@@ -152,13 +152,15 @@ body {}
     font-size: 0.2rem;
     min-width: 200px;
   }
-/*
-  #background {
-    height: 23%;
-    width: 100%;
-    background: url('img2_crop.jpg');
-    background-size: contain;
-  }*/
+
+  #getting-married {
+    min-height:35dvh;
+  }
+
+  #location-photo {
+    border: none;
+    max-width: 100%
+  }
 
   #main-container {
     display: flex;
@@ -186,6 +188,12 @@ body {}
 
   h2 {
     font-size: 1rem;
+  }
+
+  #location-container {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 }
 

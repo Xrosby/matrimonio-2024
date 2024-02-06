@@ -37,8 +37,8 @@ function App() {
       id: 'location',
       component: <div className='content-container' id="location">
         <h1>Location</h1>
-        <div style={{ display: 'flex' }}>
-          <div style={{ maxWidth: '48%', border: '2px solid black' }}>
+        <div id="location-container" style={{ display: 'flex' }}>
+          <div id="location-photo">
             <img style={{ height: '100%', width: '100%' }} src={castello} alt='Castello di San Basilio' />
           </div>
           <div style={{ paddingLeft: '4%' }}>The location is Castello Di San Basilio in Pisticci. Some random test! San Basilio in Pisticci. Some random test! San Basilio in Pisticci. Some random test! San Basilio in Pisticci. Some random test! San Basilio in Pisticci. Some random test! San Basilio in Pisticci. Some random test! </div>
@@ -119,7 +119,7 @@ function App() {
             fontSize: 30
           }} />
       </div>
-      <div id="main-container" style={{ height: '75%', width: '100%' }}>
+      <div id="main-container" style={{ height: '5%', width: '100%' }}>
 
 
         <Drawer
