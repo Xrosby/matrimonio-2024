@@ -1,5 +1,6 @@
 import './App.css';
 import castello from './castello.jpg'
+import photo from './LAMPEORIGINAL.jpg'
 
 import * as React from 'react';
 import Box from '@mui/material/Box';
@@ -26,7 +27,7 @@ function App() {
         <div id="getting-married">
           <h1>We're Getting Married!</h1>
           <div style={{ display: 'flex' }}>
-            <h2 style={{ borderRight: '1px solid darkgrey', paddingRight: 10, marginRight: 10 }}>August 17th, 2024</h2><h2>Castello di San Basilio, Pisticci</h2>
+            <h2 style={{ borderRight: '1px solid darkgrey' }}>August 17th, 2024</h2><h2>Castello di San Basilio, Pisticci</h2>
           </div>
         </div>
     },
@@ -86,7 +87,7 @@ function App() {
         {menuItems.map((item) => (
           <ListItem key={item.name} disablePadding>
             <ListItemButton>
-              <a href={`#${item.id}`}>
+              <a onClick={() => setOpen(false)} style={{ display: 'flex', color: '#141414' }} href={`#${item.id}`}>
                 <ListItemIcon>
                   {item.icon}
                 </ListItemIcon>
@@ -103,28 +104,36 @@ function App() {
   return (
 
     <div className="App">
-
-      <div id="main-container" style={{ height: '75%', width: '100%' }}>
-        <div id="filter"></div>
-        <div id="background">      </div>
-
-        <div id='mobile-menu'>
-          <Button style={{ zIndex: 999, cursor: 'pointer' }} onClick={() => setOpen(true)}>
-            <div style={{ width: 30, height: 25 }}><MenuIcon style={{ color: 'white', fontSize: 50 }} /></div></Button>
-          <Drawer
-            anchor={'left'}
-            open={open}
-            onClose={() => setOpen(false)}
-          >
-            {list('left')}
-          </Drawer>
-        </div>
-        <div id="desktop-menu">
-          {menuItems.map(menuItem => <MenuItem name={menuItem.name} id={menuItem.id} />)}
-        </div>
-
-        <div id="names">Mads Nica</div>
+      <div id="background"></div>
+      <div id="mobile-menu" style={{ position: 'absolute', display: open ? 'none' : 'block' }}>
+        <MenuIcon
+          onClick={() => setOpen(true)}
+          style={{
+            position: 'fixed',
+            zIndex: 9999,
+            top: 0,
+            left: 0,
+            color: 'black',
+            padding: 5,
+            backgroundColor: '#fff',
+            fontSize: 30
+          }} />
       </div>
+      <div id="main-container" style={{ height: '75%', width: '100%' }}>
+
+
+        <Drawer
+          anchor={'left'}
+          open={open}
+          onClose={() => setOpen(false)}
+        >
+          {list('left')}
+        </Drawer>
+      </div>
+      <div id="desktop-menu">
+        {menuItems.map(menuItem => <MenuItem name={menuItem.name} id={menuItem.id} />)}
+      </div>
+
 
       <div style={{ backgroundColor: 'white', width: '100%', display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
         {menuItems.map(item => item.component)}
