@@ -8,18 +8,38 @@
   src: url('fonts/caviar_dreams/CaviarDreams.ttf')
 }
 
+
+@font-face {
+  font-family: 'charlotte';
+  src: url('fonts/charlotte/charlotte.otf')
+}
+
 * {
   font-family: caviar;
 }
 
+/* Largest devices such as desktops (1280px and up) */
+#mobile-menu {
+  position: sticky;
+  top:0;
+  left:0;
+  display: none;
+}
 
-#menu {
+#desktop-menu {
+  background-color: rgba(1, 20, 8, 0.8);
   z-index: 100;
   padding: 3rem;
   width: 100%;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  color: white;
   justify-content: space-around;
+}
+
+#menu a {
+  color: white;
 }
 
 h1 {
@@ -27,25 +47,24 @@ h1 {
 }
 
 .content-container {
-  min-height: 500px;
-  width: '50%';
+  min-height: 800px;
+  width: 75%;
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-Direction: column;
 }
 
 #names {
-  font-size: 3rem;
+  padding-top: 1%;
+  z-index: 100;
+  font-size: 4rem;
   color: white;
-  /*border-top: 1px solid goldenrod;
-  border-bottom: 1px solid goldenrod;*/
   min-width: 650px;
   width: 28%;
   transform: rotate(350deg);
   font-family: adelia;
 }
-
-
 
 #main-container {
   overflow-x: hidden;
@@ -71,7 +90,7 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 65, 0.5)
+  background-color: rgba(1, 50, 32, 0)
 }
 
 .App {
@@ -85,6 +104,9 @@ body {
   margin: 0;
   padding: 0;
 }
+
+
+
 
 .App-logo {
   height: 40vmin;
@@ -121,3 +143,40 @@ body {
     transform: rotate(360deg);
   }
 }
+
+
+/* Small devices such as large phones (330px and up) */
+@media only screen and (min-width: 130px) and (max-width:768px) {
+  #names {
+    font-size: 1.5rem;
+  }
+
+  #background {
+    height: 23%;
+    width: 100%;
+    background: url('img2_crop.jpg');
+    background-size: contain;
+  }
+
+  #filter {
+    z-index: 100;
+    height: 23%;
+    width: 100%;
+  }
+
+  #desktop-menu {
+    display: none;
+  }
+
+  #mobile-menu {
+    display: block;
+  }
+}
+
+
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em) {}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 64em) {}
