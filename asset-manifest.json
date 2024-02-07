@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/matrimonio-2024/static/css/main.c8d34b23.css",
-    "main.js": "/matrimonio-2024/static/js/main.d3f6e84c.js",
-    "static/media/img1_crop.jpg": "/matrimonio-2024/static/media/img1_crop.a598b153cc7084f2360b.jpg",
+    "main.css": "/matrimonio-2024/static/css/main.4d2c94b0.css",
+    "main.js": "/matrimonio-2024/static/js/main.138f083e.js",
+    "static/media/castello.jpg": "/matrimonio-2024/static/media/castello.5752d20633b8eff03b19.jpg",
+    "static/media/LAMPEORIGINAL.jpg": "/matrimonio-2024/static/media/LAMPEORIGINAL.f367e79cf8941196fc46.jpg",
+    "static/media/img2_crop.jpg": "/matrimonio-2024/static/media/img2_crop.0a3bb743cc40e1f2f452.jpg",
+    "static/media/CaviarDreams.ttf": "/matrimonio-2024/static/media/CaviarDreams.174b0a13f7e49c169450.ttf",
     "static/media/adelia.otf": "/matrimonio-2024/static/media/adelia.3a027bde7446775041f5.otf",
+    "static/media/charlotte.otf": "/matrimonio-2024/static/media/charlotte.8fcc41ab8cd891b2c611.otf",
     "index.html": "/matrimonio-2024/index.html",
-    "main.c8d34b23.css.map": "/matrimonio-2024/static/css/main.c8d34b23.css.map",
-    "main.d3f6e84c.js.map": "/matrimonio-2024/static/js/main.d3f6e84c.js.map"
+    "main.4d2c94b0.css.map": "/matrimonio-2024/static/css/main.4d2c94b0.css.map",
+    "main.138f083e.js.map": "/matrimonio-2024/static/js/main.138f083e.js.map"
   },
   "entrypoints": [
-    "static/css/main.c8d34b23.css",
-    "static/js/main.d3f6e84c.js"
+    "static/css/main.4d2c94b0.css",
+    "static/js/main.138f083e.js"
   ]
 }
