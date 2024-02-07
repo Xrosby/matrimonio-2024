@@ -85,7 +85,7 @@ h2 {
 
 
 #background {
-  min-height: 31.533dvh;
+  min-height: 50dvh;
   background: url('img2_crop.jpg') no-repeat;
   background-size: cover;
   min-width: 100dvw;
@@ -182,6 +182,10 @@ body {
     z-index: 100;
     height: 23%;
     width: 100%;
+  }
+
+  #background {
+    min-height: 31.533dvh;
   }
 
   #desktop-menu {

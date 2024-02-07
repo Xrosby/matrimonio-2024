@@ -1,21 +1,14 @@
 import './App.css';
 import castello from './castello.jpg'
-import photo from './LAMPEORIGINAL.jpg'
-
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
 import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
-
 import CelebrationIcon from '@mui/icons-material/Celebration';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
@@ -93,7 +86,7 @@ function App() {
         {menuItems.map((item) => (
           <ListItem key={item.name} disablePadding>
             <ListItemButton>
-              <a onClick={() => setOpen(false)} style={{ display: 'flex', color: '#141414' }} href={`#${item.id}`}>
+              <a onClick={() => setOpen(false)} style={{ display: 'flex', color: '#141414', alignItems: 'center' }} href={`#${item.id}`}>
                 <ListItemIcon>
                   {item.icon}
                 </ListItemIcon>
@@ -113,6 +106,7 @@ function App() {
       <div id="background"></div>
       <div id="mobile-menu"
         style={{
+
           position: 'fixed',
           zIndex: 999,
           top: 0,
@@ -122,6 +116,7 @@ function App() {
           onClick={() => setOpen(true)}
           style={{
             zIndex: 999,
+            boxShadow: '2px 2px 4px rgba(0, 0, 0, 0.1)',
             marginLeft: 5,
             marginTop: 5,
             color: 'black',
@@ -138,7 +133,7 @@ function App() {
           {menuItems.map(menuItem => <MenuItem name={menuItem.name} id={menuItem.id} />)}
         </div>
         <Drawer
-        style={{zIndex:1000}}
+          style={{ zIndex: 1000 }}
           anchor={'left'}
           open={open}
           onClose={() => setOpen(false)}
