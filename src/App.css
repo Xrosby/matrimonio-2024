@@ -38,6 +38,10 @@ a {
   flex-direction: row;
   align-items: center;
   color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
   justify-content: space-around;
 }
 
@@ -145,6 +149,12 @@ h2 {
   max-width: 48%
 }
 
+html,
+body {
+  height: 100%;
+  overflow: auto
+}
+
 
 /* Small devices such as large phones (330px and up) */
 @media only screen and (min-width: 130px) and (max-width:768px) {
@@ -154,7 +164,7 @@ h2 {
   }
 
   #getting-married {
-    min-height:35dvh;
+    min-height: 35dvh;
   }
 
   #location-photo {
@@ -175,11 +185,11 @@ h2 {
   }
 
   #desktop-menu {
-    display: none;
+    display: none
   }
 
   #mobile-menu {
-    display: block;
+    display: inline-block
   }
 
   h1 {
@@ -196,11 +206,3 @@ h2 {
     flex-direction: column;
   }
 }
-
-
-
-/* Medium devices such as tablets (768px and up) */
-@media only screen and (min-width: 48em) {}
-
-/* Large devices such as laptops (1024px and up) */
-@media only screen and (min-width: 64em) {}

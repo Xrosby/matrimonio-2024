@@ -16,23 +16,29 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 
+import CelebrationIcon from '@mui/icons-material/Celebration';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import CameraAltIcon from '@mui/icons-material/CameraAlt';
+import EmailIcon from '@mui/icons-material/Email';
+import RedeemIcon from '@mui/icons-material/Redeem';
+
 
 function App() {
   const menuItems = [
     {
-      icon: <InboxIcon />,
+      icon: <CelebrationIcon />,
       name: 'We\'re Getting Married!',
       id: 'getting-married',
       component:
         <div id="getting-married">
           <h1>We're Getting Married!</h1>
           <div style={{ display: 'flex' }}>
-            <h2 style={{ borderRight: '1px solid darkgrey', paddingRight:10, marginRight:10 }}>August 17th, 2024</h2><h2>Castello di San Basilio, Pisticci</h2>
+            <h2 style={{ borderRight: '1px solid darkgrey', paddingRight: 10, marginRight: 10 }}>August 17th, 2024</h2><h2>Castello di San Basilio, Pisticci</h2>
           </div>
         </div>
     },
     {
-      icon: <InboxIcon />,
+      icon: <LocationOnIcon />,
       name: 'Location',
       id: 'location',
       component: <div className='content-container' id="location">
@@ -46,7 +52,7 @@ function App() {
       </div>
     },
     {
-      icon: <InboxIcon />,
+      icon: <CameraAltIcon />,
       name: 'What To See',
       id: 'what-to-see',
       component: <div className='content-container' id="what-to-see">
@@ -54,7 +60,7 @@ function App() {
       </div>
     },
     {
-      icon: <InboxIcon />,
+      icon: <EmailIcon />,
       name: 'RSVP',
       id: 'rsvp',
       component: <div className='content-container' id="rsvp">
@@ -62,7 +68,7 @@ function App() {
       </div>
     },
     {
-      icon: <InboxIcon />,
+      icon: <RedeemIcon />,
       name: 'Gifts',
       id: 'gifts',
       component: <div className='content-container' id="gifts">
@@ -105,24 +111,34 @@ function App() {
 
     <div className="App">
       <div id="background"></div>
-      <div id="mobile-menu" style={{ position: 'absolute', display: open ? 'none' : 'block' }}>
+      <div id="mobile-menu"
+        style={{
+          position: 'fixed',
+          zIndex: 999,
+          top: 0,
+          left: 0
+        }}>
         <MenuIcon
           onClick={() => setOpen(true)}
           style={{
-            position: 'fixed',
-            zIndex: 9999,
-            top: 0,
-            left: 0,
+            zIndex: 999,
+            marginLeft: 5,
+            marginTop: 5,
             color: 'black',
             padding: 5,
             backgroundColor: '#fff',
-            fontSize: 30
+            fontSize: 30,
+            borderRadius: 5,
+            border: '1px solid lightgrey'
           }} />
       </div>
       <div id="main-container" style={{ height: '5%', width: '100%' }}>
 
-
+        <div id="desktop-menu">
+          {menuItems.map(menuItem => <MenuItem name={menuItem.name} id={menuItem.id} />)}
+        </div>
         <Drawer
+        style={{zIndex:1000}}
           anchor={'left'}
           open={open}
           onClose={() => setOpen(false)}
@@ -130,9 +146,7 @@ function App() {
           {list('left')}
         </Drawer>
       </div>
-      <div id="desktop-menu">
-        {menuItems.map(menuItem => <MenuItem name={menuItem.name} id={menuItem.id} />)}
-      </div>
+
 
 
       <div style={{ backgroundColor: 'white', width: '100%', display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
