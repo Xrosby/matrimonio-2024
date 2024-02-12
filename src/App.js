@@ -1,5 +1,9 @@
 import './App.css';
+
+
 import castello from './castello.jpg'
+import matera from './matera_watercolor.png'
+
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -25,19 +29,19 @@ function App() {
       component:
         <div id="getting-married">
           <h1>We're Getting Married!</h1>
-          <div style={{ display: 'flex' }}>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
             <h2 style={{ borderRight: '1px solid darkgrey', paddingRight: 10, marginRight: 10 }}>August 17th, 2024</h2><h2>Castello di San Basilio, Pisticci</h2>
           </div>
         </div>
     },
-    {
+    /*{
       icon: <LocationOnIcon />,
       name: 'Location',
       id: 'location',
       component: <div className='content-container' id="location">
         <h1>Location</h1>
-        <div id="location-container" style={{ display: 'flex' }}>
-          <div id="location-photo">
+        <div className="info-container" style={{ display: 'flex' }}>
+          <div className='photo'>
             <img style={{ height: '100%', width: '100%' }} src={castello} alt='Castello di San Basilio' />
           </div>
           <div style={{ paddingLeft: '4%' }}>The location is Castello Di San Basilio in Pisticci. Some random test! San Basilio in Pisticci. Some random test! San Basilio in Pisticci. Some random test! San Basilio in Pisticci. Some random test! San Basilio in Pisticci. Some random test! San Basilio in Pisticci. Some random test! </div>
@@ -50,6 +54,12 @@ function App() {
       id: 'what-to-see',
       component: <div className='content-container' id="what-to-see">
         <h1>What To See</h1>
+        <div className="info-container" style={{ display: 'flex' }}>
+          <div style={{ paddingRight: '4%' }}>Some text about matera Some text about matera Some text about matera Some text about matera Some text about matera Some text about matera Some text about matera Some text about matera Some text about matera Some text about matera Some text about matera Some text about matera Some text about matera Some text about matera Some text about matera Some text about matera Some text about matera </div>
+          <div className="photo">
+            <img style={{ height: '100%', width: '100%' }} src={matera} alt='Matera' />
+          </div>
+        </div>
       </div>
     },
     {
@@ -68,6 +78,7 @@ function App() {
         <h1>Gifts</h1>
       </div>
     },
+    */
   ]
 
   const MenuItem = ({ name, id }) => <a style={{ textDecoration: 'none', fontWeight: 600, fontSize: 20 }} href={`#${id}`}>{name.toUpperCase()}</a>
@@ -104,9 +115,50 @@ function App() {
 
     <div className="App">
       <div id="background"></div>
-      <div id="mobile-menu"
-        style={{
+      <div id="content">
 
+        <div id="getting-married" className='info'>
+          <h1>We're Getting Married!</h1>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <h2 style={{ borderRight: '1px solid darkgrey', paddingRight: 10, marginRight: 10 }}>August 17th, 2024</h2><h2>Castello di San Basilio, Pisticci</h2>
+          </div>
+          <div style={{ padding: 10 }}>Hi we are getting married nice to see you blablablaHi we are getting married nice te you blablablaHi we are getting married nice te you blablablaHi we are getting married nice te you blablablaHi we are getting married nice te you blablablaHi we are getting married nice te you blablablaHi we are getting married nice to see you blablablaHi we are getting married nice to see you blablablaHi we are getting married nice to see you blablabla</div>
+        </div>
+
+        <div className='info' id="location">
+          <h1>Location</h1>
+          <div style={{ padding: 10 }}>The party will take place at blablabla blablablThe party will take place at blablabla blablablThe party will take place at blablabla blablablThe party will take place at blablabla blablablThe party will take place at blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla</div>
+
+          <div style={{ padding: 10 }}>
+            <div className='photo'>
+              <img style={{ height: '100%', width: '100%' }} src={castello} alt='Castello di San Basilio' />
+            </div>
+
+          </div>
+          <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+            <button style={{ border: 'none', padding: 10, color: '#444444', display: 'flex', alignItems: 'center' }}><LocationOnIcon /><a style={{fontWeight:'bold', color: '#444444' }} href="https://maps.app.goo.gl/D4zGethCmge9tt2s8">Click here for directions</a></button>
+          </div>
+        </div>
+
+        <div className='info' id="gifts">
+          <h1>Gifts</h1>
+          <div style={{ padding: 10 }}>it would be nice to get presents as money or <a href='linktogifts'>here</a>it would be nice to get presents as money or <a href='linktogifts'>here</a>it would be nice to get presents as money or <a href='linktogifts'>here</a>it would be nice to get presents as money or <a href='linktogifts'>here</a>it would be nice to get presents as money or <a href='linktogifts'>here</a></div>
+
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <h2>IBAN: 32115AF2123KL99912390000</h2>
+          </div>
+        </div>
+
+      </div>
+    </div >
+  );
+}
+
+
+/*
+
+<div id="mobile-menu"
+        style={{
           position: 'fixed',
           zIndex: 999,
           top: 0,
@@ -123,8 +175,7 @@ function App() {
             padding: 5,
             backgroundColor: '#fff',
             fontSize: 30,
-            borderRadius: 5,
-            border: '1px solid lightgrey'
+            borderRadius: 2
           }} />
       </div>
       <div id="main-container" style={{ height: '5%', width: '100%' }}>
@@ -148,8 +199,6 @@ function App() {
         {menuItems.map(item => item.component)}
       </div>
 
-    </div >
-  );
-}
 
+*/
 export default App;
